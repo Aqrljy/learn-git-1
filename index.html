@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录/注册</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkLogin() {
+            var name = document.getElementById("uname").value;
+            var pass = document.getElementById("upsw").value;
+            //判断非空
+            if((name==null || name=="")||(pass==null || pass=="")) {
+                alert("用户名或密码不能为空！");
+            }
+            else {
+                if(name == "ljy" && pass =="123456") {
+                    alert("登陆成功！");
+                    window.location.href ="../登录注册页面/计算机学院静态网页/harbin.html";
+                }
+                else {
+                    alert("用户名或密码错误！");
+                }
+            }
+        }
+        function display() {
+            var email = document.getElementById("remail").value;
+            var fname = document.getElementById("rfname").value;
+            var name = document.getElementById("rname").value;
+            var psw = document.getElementById("rpsw").value;
+            console.log("email:"+email);
+            console.log("fullName:"+fname);
+            console.log("name:"+name);
+            console.log("password:"+psw);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="container-forms">
+            <div class="container-info">
+                <div class="info-item">
+                    <div class="table">
+                        <div class="table-cell">
+                            <p>
+                                你有账户吗？
+                            </p>
+                            <button class="info-btn">
+                                登 录
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="table">
+                        <div class="table-cell">
+                            <p>
+                                欢迎注册账号！
+                            </p>
+                            <button class="info-btn">
+                                注 册
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-form">
+                <div class="form-item login-in">
+                    <div class="table">
+                        <div class="table-cell">
+                            <input type="text" id="uname" name="Username" placeholder="用户名">
+                            <input type="password" id="upsw" name="Password" placeholder="密码">
+                            <!-- <button class="btn"> -->
+                                <!-- <a href="../登录注册页面/计算机学院静态网页/harbin.html">登 录</a> -->
+                                <!-- 登 录 -->
+                            <!-- </button> -->
+                            <input type="submit" name="submit" class="btn" value="登录" onclick="checkLogin()">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item sign-up">
+                    <div class="table">
+                        <div class="table-cell">
+                            <input type="text" id="remail" name="email" placeholder="邮箱">
+                            <input type="text" id="rfname" name="fullName" placeholder="全名">
+                            <input type="text" id="rname" name="Username" placeholder="用户名">
+                            <input type="password" id="rpsw" name="Password" placeholder="密码">
+                            <!-- <button class="btn">
+                                注 册
+                            </button> -->
+                            <input type="text" name="regist" class="btn" value="注册" onclick="display()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
